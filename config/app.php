@@ -175,6 +175,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Spatie\Permission\PermissionServiceProvider::class,
+
     ],
 
     /*
@@ -229,6 +231,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+    ],
+
+    'admin' => [
+        'email' => (string) env('ADMIN_EMAIL', null),
+        'password' => (string) env('ADMIN_PASSWORD', null),
     ],
 
 ];
